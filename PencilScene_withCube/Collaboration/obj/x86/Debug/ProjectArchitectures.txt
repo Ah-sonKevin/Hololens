@@ -1,0 +1,2 @@
+D:\Workspace\Hololens\Collaboration\PencilScene_withCube\Collaboration\Collaboration.csproj;x86
+D:\Workspace\Hololens\Collaboration\PencilScene_withCube\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86

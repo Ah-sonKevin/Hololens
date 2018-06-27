@@ -1,0 +1,2 @@
+D:\Workspace\Hololens\Collaboration\SpawnCube\Collaboration\Collaboration.csproj;x86
+D:\Workspace\Hololens\Collaboration\SpawnCube\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/HoloToolkit-Examples/Sharing/SharingService/Scenes/SharingSpawnTest.unity
+    guid: ce1ce2e2fae76fe41a127041a7fd6df3
+  - enabled: 1
+    path: Assets/WorkingpencilScene.unity
+    guid: 327d584ff6ae60d439d2f6c2f770ffdc
+  - enabled: 0
+    path: Assets/NewShqring.unity
+    guid: adc64baa25de5294ab9ff209e2f9c659
+  - enabled: 0
+    path: Assets/PencilSceneTestCopy.unity
+    guid: 03671947b2aa9b8468d4f2b4d60fb57e
+  m_configObjects: {}
