@@ -23,7 +23,8 @@ namespace HoloToolkit.Sharing.Tests
             HeadTransform = MessageID.UserMessageIDStart,
             Max,
             clicked,
-            Flags
+            Flags,
+            StageTransform
         }
 
         public enum UserMessageChannels
@@ -137,6 +138,25 @@ namespace HoloToolkit.Sharing.Tests
                     msg,
                     MessagePriority.Immediate,
                     MessageReliability.UnreliableSequenced,
+                    MessageChannel.Avatar);
+            }
+        }
+
+        public void SendStageTransform(Vector3 position, Quaternion rotation)
+        {
+            // If we are connected to a session, broadcast our head info
+            if (this.serverConnection != null && this.serverConnection.IsConnected())
+            {
+                // Create an outgoing network message to contain all the info we want to send
+                NetworkOutMessage msg = CreateMessage((byte)TestMessageID.StageTransform);
+
+                AppendTransform(msg, position, rotation);
+
+                // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.
+                this.serverConnection.Broadcast(
+                    msg,
+                    MessagePriority.Immediate,
+                    MessageReliability.ReliableOrdered,
                     MessageChannel.Avatar);
             }
         }

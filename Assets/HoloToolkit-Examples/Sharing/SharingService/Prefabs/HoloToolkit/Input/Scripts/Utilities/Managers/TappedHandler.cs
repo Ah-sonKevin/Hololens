@@ -1,6 +1,7 @@
 ﻿
 using HoloToolkit.Sharing;
 using HoloToolkit.Sharing.Spawning;
+using HoloToolkit.Sharing.SyncModel;
 using HoloToolkit.Sharing.Tests;
 using HoloToolkit.Unity.InputModule;
 using UnityEngine;
@@ -9,16 +10,21 @@ using UnityEngine.XR.WSA.Input;
 public class TappedHandler : MonoBehaviour
 {
     public PrefabSpawnManager spawnManager;
-    private bool firstTap = true;
+  
+    private bool firstTap;
+    
+    private bool firstCopy = true;
     public GameObject copyFolder;
     SyncSpawnedObject obj = null;
-    
+
 
     void Start()
     {
-       // copyFolder = GameObject.Find("Copie");        
+        firstTap = true;
+        Debug.LogError(firstTap);
+        // copyFolder = GameObject.Find("Copie");        
         this.recognizer = new GestureRecognizer();
-        recognizer.SetRecognizableGestures(GestureSettings.DoubleTap|GestureSettings.Tap | GestureSettings.Hold);
+        recognizer.SetRecognizableGestures(GestureSettings.DoubleTap | GestureSettings.Tap | GestureSettings.Hold);
         this.recognizer.TappedEvent += OnTapped;
         recognizer.HoldCompletedEvent += OnHoldComplete;
 
@@ -26,7 +32,7 @@ public class TappedHandler : MonoBehaviour
 
 
 
-       
+
 
         //Script to recognize Double tap
 
@@ -38,7 +44,6 @@ public class TappedHandler : MonoBehaviour
         //  obj = null;
         Color col = obj.GameObject.GetComponent<MeshRenderer>().material.color;
         col.a = 0.2f;
-
         obj.GameObject.GetComponent<MeshRenderer>().material.color = col;
             firstTap = true;
             Debug.Log(firstTap);            
@@ -49,9 +54,10 @@ public class TappedHandler : MonoBehaviour
     }
     void OnTapped(InteractionSourceKind source, int tapCount, Ray headRay)
     {
+       
         // If we're networking...
         // if (SharingStage.Instance.IsConnected)
-        if (true)
+        if (firstTap == true)
         {
             Debug.Log("********************* Spawn *****************************");
             firstTap = false;
@@ -90,13 +96,12 @@ public class TappedHandler : MonoBehaviour
         //  obj = null;
         Color col = obj.GameObject.GetComponent<MeshRenderer>().material.color;
         col.a = 0.2f;
-
         obj.GameObject.GetComponent<MeshRenderer>().material.color = col;
             firstTap = true;
             Debug.Log(firstTap);            
         }*/
 
-
+        obj.GameObject.SendMessage("OnSelect");
 
     }
     GestureRecognizer recognizer;
@@ -105,31 +110,33 @@ public class TappedHandler : MonoBehaviour
 
     void OnHoldComplete(InteractionSourceKind source, Ray headRay)
     {
-        
-        Debug.LogError("Hold");
-        // If we're networking...
-       // if (SharingStage.Instance.IsConnected)
+        if (firstCopy == true)
+        {
+            Debug.LogError("Hold");
+            // If we're networking...
+            // if (SharingStage.Instance.IsConnected)
             if (true)
             {
-          //  CustomMessages.Instance.SendFlag();
-           // FlagScript.ToggleFlag();
-            //   GameObject child = this.gameObject.transform.GetChild(0).gameObject;
+                //  CustomMessages.Instance.SendFlag();
+                // FlagScript.ToggleFlag();
+                //   GameObject child = this.gameObject.transform.GetChild(0).gameObject;
 
-            // GameObject copie = Instantiate(copyFolder, transform.position + Vector3.right  , transform.rotation );
+                // GameObject copie = Instantiate(copyFolder, transform.position + Vector3.right  , transform.rotation );
 
-            GameObject copie = Instantiate(obj.GameObject, transform.position + Vector3.right, transform.rotation,copyFolder.transform);
-            copie.GetComponent<MeshRenderer>().material.color = Color.white;
-           
-             copie.SendMessage("SetOriginal",obj, SendMessageOptions.RequireReceiver);
-            Debug.LogError("Hold2");
-            Debug.LogError(copie);
-            // Color col = this.gameObject.GetComponent<MeshRenderer>().material.color;
-            //col.a = 0.2f;
-            //   this.gameObject.GetComponent<MeshRenderer>().material.color = col;
-            //obj.GameObject.GetComponent<MeshRenderer>().material.color = col;
-            // copie.GetComponent<Renderer>().material.color = Color.blue;
+                GameObject copie = Instantiate(obj.GameObject, this.gameObject.transform.GetChild(0).transform.position + Vector3.right, transform.rotation, copyFolder.transform);
+                copie.GetComponent<MeshRenderer>().material.color = Color.green;
 
+                // copie.SendMessage("SetOriginal",obj, SendMessageOptions.RequireReceiver);
+                Debug.LogError("Hold2");
+                Debug.LogError(copie);
+                firstCopy = false;
+                // Color col = this.gameObject.GetComponent<MeshRenderer>().material.color;
+                //col.a = 0.2f;
+                //   this.gameObject.GetComponent<MeshRenderer>().material.color = col;
+                //obj.GameObject.GetComponent<MeshRenderer>().material.color = col;
+                // copie.GetComponent<Renderer>().material.color = Color.blue;
 
+            }
         }
     }
 
@@ -143,8 +150,8 @@ public class TappedHandler : MonoBehaviour
         obj.GameObject.transform.position = pos;
         obj.GameObject.transform.rotation = rotation;
         obj.GameObject.transform.localScale = scale;
-        
-         obj.GameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+        obj.GameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         obj.GameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
     }

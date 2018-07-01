@@ -26,8 +26,10 @@ GameObject:
   - component: {fileID: 114294181968744064}
   - component: {fileID: 114200841907663610}
   - component: {fileID: 114823731331014794}
+  - component: {fileID: 114357376295963410}
   - component: {fileID: 54118277864835280}
   - component: {fileID: 114710053578724986}
+  - component: {fileID: 114237752077229858}
   m_Layer: 0
   m_Name: SpawnTestCube
   m_TagString: Untagged
@@ -101,7 +103,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -139,6 +141,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b2868906fcb9a40a6b9d141b6bd374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114237752077229858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011931115288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee693c459215e6246ad09d893a234103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114294181968744064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,6 +169,30 @@ MonoBehaviour:
   manipulationMode: 6
   rotationConstraint: 2
   enableOneHandMovement: 1
+--- !u!114 &114357376295963410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011931115288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4768146f072b50149a922df192dfb58f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flattenedAxis: 0
+  scaleHandleMaterial: {fileID: 2100000, guid: 4a9072a0d8623aa44abf31f02d209a09, type: 2}
+  rotateHandleMaterial: {fileID: 2100000, guid: 4a9072a0d8623aa44abf31f02d209a09,
+    type: 2}
+  interactingMaterial: {fileID: 2100000, guid: b614a09bc429623478e946d8170b15ae, type: 2}
+  scaleRate: 1
+  maxScale: 2
+  rotationType: 0
+  handMotionToRotate: 0
+  boundingBoxPrefab: {fileID: 114030465538688920, guid: 865a8ded6c47efd4285f04f3aebe99e9,
+    type: 2}
+  appBarPrefab: {fileID: 114050950401502068, guid: aa610ada334bff640a535f0d23a9a15c,
+    type: 2}
 --- !u!114 &114710053578724986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,14 +205,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copie: {fileID: 0}
+  copyTransform: {fileID: 0}
 --- !u!114 &114823731331014794
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011931115288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9c8118e748c530458d47d6854d8c7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnManager: {fileID: 0}

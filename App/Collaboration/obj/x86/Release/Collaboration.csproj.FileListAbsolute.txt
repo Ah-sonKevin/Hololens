@@ -308,3 +308,5 @@ D:\Workspace\Hololens\Collaboration\App\Collaboration\obj\x86\Release\qualifiers
 D:\Workspace\Hololens\Collaboration\App\Collaboration\obj\x86\Release\qualifiers.txt.intermediate
 D:\Workspace\Hololens\Collaboration\App\Collaboration\obj\x86\Release\MultipleQualifiersPerDimensionFound.txt
 D:\Workspace\Hololens\Collaboration\App\Collaboration\obj\x86\Release\ProjectArchitectures.txt
+D:\Workspace\Hololens\Collaboration\App\Collaboration\bin\x86\Release\Vuforia.UnityExtensions.dll
+D:\Workspace\Hololens\Collaboration\App\Collaboration\bin\x86\Release\Vuforia.UnityExtensions.pdb

@@ -52,7 +52,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactables:
-  - {fileID: 1000013198843976, guid: 2702ecab89b993642b714ec200597bbb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Targets:
-  - {fileID: 1000013198843976, guid: 2702ecab89b993642b714ec200597bbb, type: 2}
+  - {fileID: 0}
   lockFocus: 0

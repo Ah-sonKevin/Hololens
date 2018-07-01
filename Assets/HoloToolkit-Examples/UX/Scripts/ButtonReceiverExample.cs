@@ -13,6 +13,7 @@ namespace HoloToolkit.Unity.Examples
     {
         public GameObject textObjectState;
         private TextMesh txt;
+        
 
         void Start()
         {
@@ -32,6 +33,11 @@ namespace HoloToolkit.Unity.Examples
         protected override void InputDown(GameObject obj, InputEventData eventData) {
             Debug.Log(obj.name + " : InputDown");
             txt.text = obj.name + " : InputDown";
+
+            if (obj.name.Equals("ToolbarButton1"))
+            {
+                Debug.Log("Button1");
+            }
         }
 
         protected override void InputUp(GameObject obj, InputEventData eventData) {

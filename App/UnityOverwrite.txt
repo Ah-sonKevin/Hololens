@@ -7,8 +7,8 @@
 # Default behavior is to never overwrite files
 Collaboration.sln: modified
 Collaboration\App.cs: 95DC578F7AB76BCF52EB890DD7C7EEAD
-Collaboration\AssemblyConverterArgs.txt: 174D75DCDB2D022CF26F77004B76364F
-Collaboration\Collaboration.csproj: B37A991E5F991E8C83F816CFA0E37A8B
+Collaboration\AssemblyConverterArgs.txt: E2486C3E3B611A7B702E84645AD7520B
+Collaboration\Collaboration.csproj: 0F875A6A52B2C93A2B5B265E8E8F5044
 Collaboration\Collaboration.csproj.user: modified
 Collaboration\Package.appxmanifest: F9B4F43FFC36815F24DB835FCF828647
 Collaboration\project.json: 1D02BC64BAC0D041019673A1C4C51737

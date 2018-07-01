@@ -167,19 +167,33 @@ MonoBehaviour:
   State: 0
   CustomButtonIconProfile: {fileID: 0}
   buttons:
-  - DefaultPosition: 4
-    ManipulationPosition: 4
+  - DefaultPosition: 0
+    ManipulationPosition: 0
     Type: 0
-    Name: ChangeForm
+    Name: changeColor
     Icon: ButtonIconSample
-    Text: ChangeForm
-    EventTarget: {fileID: 0}
+    Text: changeColor
+    EventTarget: {fileID: 114732956805053000, guid: 1deba628329450c408700e3e74bb390c,
+      type: 2}
     OnTappedEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 114732956805053000, guid: 1deba628329450c408700e3e74bb390c,
+            type: 2}
+          m_MethodName: TappedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   buttonParent: {fileID: 4691479528535670}
   baseRenderer: {fileID: 1275815092924048}
   backgroundBar: {fileID: 1093294406509342}
-  boundingBox: {fileID: 0}
+  boundingBox: {fileID: 114030465538688920, guid: 865a8ded6c47efd4285f04f3aebe99e9,
+    type: 2}

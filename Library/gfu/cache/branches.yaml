@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1666186674, guid: 68c7e4565cde54155bb78d8e935f1dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 2
+  lastUpdatedAtString: 2018-06-29T16:47:10.384+02:00
+  initializedAtString: 2018-06-29T16:31:38.206+02:00
+  localBranches:
+  - name: master
+    tracking: holo/master
+  remoteBranches:
+  - name: holo/master
+    tracking: '[None]'
+  remotes:
+  - name: holo
+    url: https://github.com/Ah-sonKevin/Hololens.git
+    login: 
+    user: 
+    host: 
+    function: 0
+    token: 
+  localConfigBranches:
+    keys:
+    - master
+    values:
+    - name: master
+      remote:
+        name: holo
+        url: https://github.com/Ah-sonKevin/Hololens.git
+      trackingBranch: master
+  remoteConfigBranches:
+    keys:
+    - holo
+    subKeys:
+    - Values:
+      - master
+    subKeyValues:
+    - Values:
+      - name: master
+        remote:
+          name: holo
+          url: https://github.com/Ah-sonKevin/Hololens.git
+        trackingBranch: 
+  configRemotes:
+    keys:
+    - holo
+    values:
+    - name: holo
+      url: https://github.com/Ah-sonKevin/Hololens.git

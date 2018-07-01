@@ -190,6 +190,13 @@ namespace HoloToolkit.Unity.UX
             lastTimeTapped = Time.time + coolDownTime;
         }
 
+        public void TappedEvent()
+        {
+            Debug.LogError("Tapped");
+            this.gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
+        }
+
+
         public void Start()
         {
             State = AppBarStateEnum.Default;

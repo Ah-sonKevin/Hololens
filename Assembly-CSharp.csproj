@@ -64,9 +64,11 @@
     <Compile Include="Assets\CopyTappedHandler.cs" />
     <Compile Include="Assets\CubeInitial.cs" />
     <Compile Include="Assets\CubeToSphere.cs" />
+    <Compile Include="Assets\DataModel.cs" />
     <Compile Include="Assets\draw.cs" />
     <Compile Include="Assets\FlagScript.cs" />
     <Compile Include="Assets\FollowCopy.cs" />
+    <Compile Include="Assets\HologramPlacement.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\AdaptiveQuality\AdaptiveQualityExample.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\Boundary\Scripts\BoundaryTest.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\ColorPicker\GazeableColorPicker.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="Assets\HoloToolkit-Examples\GazeRuler\Scripts\ModeTip.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\GazeRuler\Scripts\PolygonManager.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\GazeRuler\Scripts\Test\LineTest.cs" />
+    <Compile Include="Assets\HoloToolkit-Examples\Input\Prefabs\CursorManager.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\Input\Scripts\ButtonObjectScaler.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\Input\Scripts\ButtonTimedWaiter.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\Input\Scripts\DehydrationDeactivation.cs" />
@@ -811,7 +814,10 @@
     <Compile Include="Assets\IsCopy.cs" />
     <Compile Include="Assets\Line.cs" />
     <Compile Include="Assets\Message.cs" />
+    <Compile Include="Assets\PlaceObjec.cs" />
+    <Compile Include="Assets\placeObject.cs" />
     <Compile Include="Assets\PlaySpaceManager.cs" />
+    <Compile Include="Assets\RemotePlayerManager.cs" />
     <Compile Include="Assets\SharingSessionTracker.cs" />
     <Compile Include="Assets\SharingWithUNET\Scripts\BulletController.cs" />
     <Compile Include="Assets\SharingWithUNET\Scripts\GenericNetworkTransmitter.cs" />
@@ -1089,6 +1095,9 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.UnityExtensions">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="GLTFSerialization">
       <HintPath>D:/Workspace/Hololens/Collaboration/Assets/HoloToolkit-Examples/Sharing/SharingService/Prefabs/HoloToolkit/Utilities/Scripts/GLTF/Plugins/GLTFSerialization/GLTFSerialization.dll</HintPath>
